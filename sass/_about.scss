@@ -1,0 +1,41 @@
+.about {
+   
+    &__heading { 
+        width: 80%;
+        padding: 0 10rem;
+    }
+
+    &__views {
+        margin-top: 13rem;
+        display: flex;
+        // jus
+    }
+    &__column1 {
+        flex: 0 0 45%;
+        display: flex; 
+        flex-direction: column;
+    }
+    &__column2 {
+        flex: 1 0 0;
+        display: flex; 
+        flex-direction: column;
+        margin-left: 3.5rem;
+    }
+
+    &__text {
+        display: flex;
+        justify-content: flex-end;
+        font-weight: bold; 
+        margin-top: 20rem;
+        p {
+            background-color: $color-primary;
+            font-size: 15rem;
+             
+            color: white; 
+            padding: 3rem 7rem;
+        }
+    }
+    &__img1,&__img3 {
+        margin-top: 3.5rem;
+    }
+}  

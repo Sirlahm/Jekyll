@@ -1,0 +1,139 @@
+.nav {
+    // position: fixed;
+    // z-index: 100;
+    width: 100%;
+    position: fixed;
+            z-index: 400000; 
+    // background-color: blue;
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        padding:  3.5rem; 
+        height: 10rem;
+        align-items: center;
+        
+    }
+    &__black {
+        background-color: $color-primary;
+        
+        animation: slide .3s ;
+    }
+
+    
+
+    &__menu{
+        display: flex;
+        justify-content: space-between;  
+        font-size: 2rem;
+        align-items: center;
+        
+        button {
+            border: none;
+    background-color: transparent;
+    outline: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    height: 1.2rem;
+    
+            
+        }
+    }
+    &__text{
+        margin-right: 2rem;
+    }
+
+    &__button1 {
+        width: 4rem;
+        height: .2rem;
+        display: block;
+        background-color: $color-primary;
+        
+        transition: all .5s ease;
+
+        
+
+        
+    }
+    &__button2 {
+        width: 4rem;
+    height: .2rem;
+    display: block;
+    background-color: $color-primary;
+    margin-top: .8rem;
+    
+    transition: all .5s ease;
+    
+
+    }
+    &__hide1 {
+        width: 4rem;
+        height: .2rem;
+        display: block;
+        background-color: white!important;
+        
+        transform: rotate(45deg);
+        transition: all .5s ease;
+
+
+    }
+    &__hide2 {
+        width: 4rem;
+        height: .2rem;
+        display: inline-block;
+        background-color: white!important;
+        position: relative;
+        transform: rotate(-45deg);
+        transition: all .5s ease; }
+
+    
+} 
+
+.button:focus .nav__button1 {
+    background-color: $color-primary;
+
+}
+.button:focus .nav__button2 {
+    
+    
+    background-color: $color-primary;
+    
+
+}
+
+.button:focus .nav__hide1 {
+    background-color: white;
+    transform: rotate(45deg);
+
+
+}
+.button:focus .nav__hide2 {
+    // background-color: $color-primary;
+    transform: rotate(-45deg);
+
+    
+    background-color: white;
+    
+
+}
+@keyframes slide {
+    0% {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    
+    80% {
+        opacity: 0.8;
+        // transform: translateY(-100vh);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+    
+.hide {
+   opacity: 0;
+}    

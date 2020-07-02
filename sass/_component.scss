@@ -1,0 +1,143 @@
+
+// IMAGE FITTING
+.img-item { 
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    object-fit: center; 
+}
+
+// VIDEO FITTING 
+.bg-video {
+    // position: absolute;
+    // top: 0;
+    // left: 0;
+    height: 100vh;
+    width: 100%;
+    
+    // z-index: -1;
+   overflow: hidden;  
+
+    &__content {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+// BUTTON
+.btn {
+    text-decoration: none;
+    border: 2px solid white;
+    font-size: 2.5rem;
+    font-weight: bold; 
+    padding: 2rem 4rem;
+    display: inline-block;
+    color: white;
+    transition: background-color color .3s ease;
+
+    &:hover {
+        background-color: white;
+        color: $color-primary;
+    }
+    &--black {
+        border: 2px solid $color-primary;
+        color:$color-primary ;
+        transition: all .3s ease;
+        &:hover {
+            background-color: $color-primary;
+            color: white;
+        }
+    }
+    &--white {
+        border: 2px solid $color-primary;
+        color: $color-primary;
+        transition: all .3s ease;
+        &:hover {
+            background-color: white;
+            border: 2px solid white;
+
+           
+        }
+    }
+    &--blackWhite {
+        background-color: $color-primary;
+        color: white;
+        transition: all .3s ease;
+     &:hover {
+        background-color: $color-primary;
+        color: white;
+     }
+        
+    }
+}
+
+.btn{ 
+    &:hover span {
+        transform: translateX(1.2rem);
+    }
+    span{
+        font-size: 3rem; 
+        line-height: 0;
+        transform: translateX(.7rem);
+        display: inline-block;
+    }
+}
+
+//LINK
+
+.link {
+
+    font-size: 2rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: $color-primary;
+    position: relative;
+    align-self: flex-start;
+    z-index: 10;
+    transition: all .2s ease;
+    padding: .5rem; 
+
+    &::before {
+        content: "";
+        background-color: $color-primary;
+        width: 0%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        right: -2rem;
+        left: auto;
+        z-index: -1;
+        transition: all .2s ease;
+    }
+
+    &:hover::before {
+        width: calc(100% + 4rem);
+        left : -2rem;
+        right: auto;
+
+    }
+    &:hover {
+        color: white;
+    }
+
+    &--black {
+        
+        color: white;
+         
+        &::before {
+            background-color: white; 
+         }
+        
+            &:hover {
+                color: $color-primary;
+              
+            }
+        
+
+           
+
+
+    }
+ }

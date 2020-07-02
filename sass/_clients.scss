@@ -1,0 +1,32 @@
+.clients{
+     width: 70%;
+     margin: 0 auto;
+    &__container{
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__heading {
+        color: $color-primary;
+    }
+
+    &__items {
+
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        grid-gap: 3rem;
+        grid-template-rows: repeat(3,20rem);
+        margin: 10rem 0;
+        
+    }
+    &__item {
+        border: 1px solid #eeeded; 
+        align-items: center;
+        display: flex;
+        justify-content: center;
+
+        // justify-self: center; 
+        // align-self: center;  
+        
+    }
+}

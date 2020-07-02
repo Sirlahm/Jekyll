@@ -1,0 +1,74 @@
+.description {
+  padding-left: 10rem;
+  padding-top: 20rem;
+  padding-bottom: 20rem;
+  overflow: hidden;
+    &__container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__heading {
+        width: 57%;
+        margin-bottom: 5rem;
+        span {
+            color: $color-grey;
+            font-size: 2rem; 
+            letter-spacing: .4rem;
+            margin-bottom: 3rem;
+            display: inline-block;
+        }
+    }
+    &__text {
+        color: $color-grey;
+            font-size: 2.5rem;
+            margin-top: 5rem;  
+            line-height: 1.2; 
+    }
+
+    &__view {
+        display: flex;
+        margin-top: 7rem;
+    }
+
+    &__box {
+        flex: 0 0 50%;
+        position: relative;
+        &:not(:last-child) {
+            margin-right: 3rem;
+        }
+    }
+    &__video {
+        height: 90vh;
+    }
+
+    &__overlay {
+        background-color: $color-primary;
+        padding: 7rem;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        color: white;
+        width: 100%;
+        height: 100%;
+        transition: all .8s ease;
+        &:hover {
+            background-color: rgba($color-primary, 0.6);
+        }
+
+        .span {
+            font-size: 2rem;
+            display: inline-block;
+        }
+
+        p {
+            width: 90%;
+            font-size: 3.5rem;
+            line-height: 1.3;
+            margin-top: 20rem;  
+            margin-bottom: 2rem;
+        }
+        
+    }
+}
